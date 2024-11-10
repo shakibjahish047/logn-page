@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <div class="menu">
+        <a href="#home"><i class="fas fa-home"></i>Home</a>
+        <a href="javascript:void(0);" onclick="ProductInformation()"><i class="fas fa-box"></i>Product Information</a>
+        <a href="#profile"><i class="fas fa-user"></i>Profile</a>
+        <a href="#settings"><i class="fas fa-cog"></i>Settings</a>
+        <!-- Update logout link to trigger logout function -->
+        <a href="javascript:void(0);" onclick="logout()"><i class="fas fa-sign-out-alt"></i>Logout</a>
+    </div>
+
+    <h2 class="h2">Dashboard Header</h2>
+
+    <script>
+        function logout() {
+            // Clear session data (or any other authentication data)
+            sessionStorage.clear(); // Or localStorage.clear() if you use localStorage
+
+            // Redirect to the login page
+            window.location.href = "index.html";  // Assuming your login page is named index.html
+        }
+    </script>
+    <script>
+        function ProductInformation() {
+            sessionStorage.clear();
+            window,location.href ="product-IN.html";
+        }
+    </script>
+    
+</body>
+</html>
